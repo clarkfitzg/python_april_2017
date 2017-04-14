@@ -69,9 +69,9 @@ def download(datadir = DATADIR, start = 2010):
     for year in allyears:
         ftp.cwd(year + "/DBF")
         # Grab the first zip file
-        fname = next(filter(isfars, ftp.nlst()))
+        fname = next(iter(filter(isfars, ftp.nlst())))
         # Retrieve binary files and write them to the local machine
-        fname_local = DATADIR + fname
+        fname_local = datadir + fname
         if os.path.isfile(fname_local):
             print("Already downloaded " + fname_local)
         else:
