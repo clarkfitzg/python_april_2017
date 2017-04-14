@@ -22,7 +22,7 @@ from dbfread import DBF
 
 # This will be user specific, probably want to change it.
 # Keep the trailing /, since following code assumes it.
-DATADIR = os.path.expanduser("~/data/fars/")
+DATADIR = os.curdir + os.sep
 
 
 def before2012(x, start):
