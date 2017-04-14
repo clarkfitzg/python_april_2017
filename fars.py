@@ -96,7 +96,7 @@ def unzip(fname, datadir = DATADIR):
 
     with ZipFile(datadir + fname) as zf:
         zf.extractall(yrdir)
-        print("unzipped " + f)
+        print("unzipped " + yrdir)
 
 
 def unzip_all(datadir = DATADIR):
